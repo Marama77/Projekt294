@@ -25,3 +25,24 @@
     <button type="submit">Produkte laden</button>
     <button onclick="window.location.href='categorylist-form.php'">Zur Kategorienliste</button>
 </form>
+
+<!--Table for productlist-->
+<table id="productlist-table" class="data-table">
+    <thead>
+        <tr>
+            <th>Sku</th>
+            <th>Name</th>
+            <th>Bild</th>
+            <th>Beschreibung</th>
+            <th>Preis</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Space for products-->
+    </tbody>
+</table>
+
+<!--Include the productlist-form-controller.js and the footer.php-->
+<script src="controller/productlist-form-controller.js"></script>
+<?php include "view/footer.php"; ?> 

@@ -2,7 +2,7 @@
  * Called when the form is submitted.
  * Prevents the default form submission and sends the login data via AJAX.
  * 
- * @param {SubmitEvent} event The submit event of the form
+ * @param {SubmitEvent} event The submit event of the formular
  */
 function onFormSubmitted(event) {
     //prevent page reload
@@ -32,23 +32,23 @@ function onFormSubmitted(event) {
  * Called when the server response has been loaded.
  * Checks the HTTP status code and reacts accordingly.
  * 
- * @param {event} event The load event of the XMLHttpRequest
+ * @param {ProgressEvent} event The load event of the XMLHttpRequest
  */
 function onRequestLoaded(event) {
-    //check if login was successful (HTTP 204 = No content)
+    //checks if login was successful (HTTP 204 = No content)
     if (event.currentTarget.status == 204) {
-        //redirect to product list page
+        //redirects to product list page
         window.location.href = "productlist-form.php";
     }
     else {
-        //convert server response from JSON into an object
+        //converts the server response from JSON into an object
         let response = JSON.parse(event.currentTarget.responseText);
-        //display error message
+        //displays an error message
         alert(response.error_message);
     }
 }
 
 /**
- * Registers the event listener for submitting the login form.
+ * Registers the event listener for submitting the login-formular.
  */
 document.getElementById("login-form").addEventListener("submit", onFormSubmitted);

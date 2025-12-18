@@ -1,12 +1,12 @@
 <?php
 /**
  * File: login-form.php
- * Description: Displays the user login form
+ * Description: Displays the user login formular
  *
  * Contains:
- * - HTML form for user login
+ * - HTML formular for user login
  * - Input validation
- * - Form submission to login.php
+ * - Formular submission to login.php
  *
  * @author Marianne Stieber
  * @date 2025-12-14
